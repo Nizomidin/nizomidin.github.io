@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nizomiddin Nizomidin — CV</title>
+    <meta
+      name="description"
+      content="CV of Nizomiddinov Nizomidin Sayfiddinovich — Backend Developer (Python/C++)."
+    />
+    <meta property="og:title" content="Nizomiddin Nizomidin — CV" />
+    <meta
+      property="og:description"
+      content="Backend developer (Python/C++), ICPC semifinalist. Remote/part‑time available."
+    />
+    <meta property="og:type" content="website" />
+    <style>
+      :root {
+        --bg: #0b0d12;
+        --card: #121621;
+        --text: #e7ebf3;
+        --muted: #a7b0c3;
+        --accent: #5b8cff;
+        --chip: #192038;
+        --border: #1f2636;
+        --print-text: #000;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font: 15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+          Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(
+            1200px 800px at 80% -10%,
+            #1b2440 0%,
+            rgba(0, 0, 0, 0) 60%
+          ),
+          radial-gradient(
+            1000px 600px at -10% 20%,
+            #142034 0%,
+            rgba(0, 0, 0, 0) 60%
+          ),
+          var(--bg);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 40px auto;
+        padding: 0 20px 80px;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 16px;
+        align-items: start;
+        margin-bottom: 22px;
+      }
+      .name {
+        font-size: clamp(28px, 4vw, 42px);
+        line-height: 1.2;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+      .subtitle {
+        color: var(--muted);
+        margin-top: 6px;
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        appearance: none;
+        border: 1px solid var(--border);
+        background: linear-gradient(180deg, #182034, #111623);
+        color: var(--text);
+        padding: 10px 14px;
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .btn:hover {
+        border-color: #2a3550;
+        box-shadow: 0 0 0 3px rgba(91, 140, 255, 0.12) inset;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 16px;
+      }
+      @media (max-width: 880px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      section {
+        background: color-mix(in srgb, var(--card) 88%, transparent);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 18px;
+      }
+      section + section {
+        margin-top: 16px;
+      }
+      h2 {
+        margin: 0 0 10px;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 8px;
+      }
+      .item + .item {
+        margin-top: 12px;
+      }
+
+      .card-line {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+      }
+      .title {
+        font-weight: 700;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+      .chip {
+        background: var(--chip);
+        border: 1px solid var(--border);
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 13px;
+      }
+
+      .contact dt {
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .contact dd {
+        margin: 0 0 8px;
+      }
+      .kvs {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 12px 18px;
+      }
+
+      .lang-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .lang-table td {
+        padding: 6px 0;
+        border-bottom: 1px dashed var(--border);
+      }
+      .lang-table td:first-child {
+        color: var(--muted);
+        width: 34%;
+      }
+
+      footer {
+        color: var(--muted);
+        text-align: center;
+        margin-top: 20px;
+        font-size: 13px;
+      }
+
+      /* Print styles */
+      @media print {
+        body {
+          background: #fff !important;
+          color: var(--print-text);
+        }
+        .wrap {
+          margin: 0 auto;
+          padding: 0;
+        }
+        section {
+          background: #fff;
+          border-color: #ddd;
+        }
+        .btn,
+        header .actions {
+          display: none !important;
+        }
+      }
+    </style>
+    <script>
+      function doPrint() {
+        window.print();
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nizomiddinov Nizomidin Sayfiddinovich",
+        "jobTitle": "Backend Developer",
+        "email": "mailto:nizzomiddinov_n@bk.ru",
+        "telephone": "+79534854896",
+        "nationality": "Tajikistan",
+        "knowsLanguage": ["tg", "ru", "en"],
+        "alumniOf": ["Secondary school"],
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Programmer, developer"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div>
+          <div class="name">Nizomiddinov Nizomidin</div>
+          <div class="subtitle">
+            Backend Developer • Python / C++ • ICPC semifinalist
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="mailto:nizzomiddinov_n@bk.ru" title="Email"
+            >✉️ Email</a
+          >
+          <a class="btn" href="tel:+79534854896" title="Call">📞 Call</a>
+          <button class="btn" onclick="doPrint()" title="Print / Save PDF">
+            🖨️ Print
+          </button>
+        </div>
+      </header>
+
+      <div class="grid">
+        <!-- Left column -->
+        <div>
+          <section>
+            <h2>About</h2>
+            <div class="item">
+              Olympiad programmer (ICPC semifinals). Experience mentoring
+              students and teaching algorithms; commercial backend development
+              with a focus on efficient data structures, REST APIs, and
+              microservice patterns. Fast learner; comfortable under deadlines;
+              strong team collaborator.
+            </div>
+          </section>
+
+          <section>
+            <h2>Skills</h2>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">C++</span>
+              <span class="chip">OOP</span>
+              <span class="chip">Algorithms & Data Structures</span>
+              <span class="chip">REST / JSON API</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">Git</span>
+              <span class="chip">Linux</span>
+              <span class="chip">HTML5/CSS3</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">MVC</span>
+              <span class="chip">Microservices</span>
+              <span class="chip">Teamwork</span>
+              <span class="chip">Decomposition</span>
+              <span class="chip">Mathematics</span>
+              <span class="chip">AI</span>
+              <span class="chip">IntelliJ IDEA</span>
+            </div>
+          </section>
+
+          <section>
+            <h2>Education & Courses</h2>
+            <div class="item">
+              <div class="card-line">
+                <div class="title">Secondary school</div>
+                <div class="meta">— Level</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card-line">
+                <div class="title">Algorithms & Data Structures</div>
+                <div class="meta">Yandex • 2024</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card-line">
+                <div class="title">Algorithm Trainings 6.0</div>
+                <div class="meta">Yandex • 2024</div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Preferences</h2>
+            <div class="kvs">
+              <div>Target role</div>
+              <div>Backend Developer (Программист‑разработчик)</div>
+              <div>Employment</div>
+              <div>Part‑time, Internship (стажировка)</div>
+              <div>Schedule</div>
+              <div>Flexible, Remote</div>
+              <div>Travel</div>
+              <div>Rare business trips (редко)</div>
+              <div>Relocation</div>
+              <div>Saint Petersburg</div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Right column -->
+        <aside>
+          <section>
+            <h2>Contact</h2>
+            <dl class="contact">
+              <dt>Phone</dt>
+              <dd><a href="tel:+79534854896">+7 (953) 485‑48‑96</a></dd>
+              <dt>Email</dt>
+              <dd>
+                <a href="mailto:nizzomiddinov_n@bk.ru">nizzomiddinov_n@bk.ru</a>
+              </dd>
+              <dt>Location</dt>
+              <dd>Based in: Other • Ready to relocate to Saint Petersburg</dd>
+              <dt>Citizenship</dt>
+              <dd>Tajikistan • Work permit: Russia, Tajikistan</dd>
+              <dt>DoB / Gender</dt>
+              <dd>21 Sep 2006 • Male (18)</dd>
+              <dt>Driver’s license</dt>
+              <dd>Category B</dd>
+              <dt>Updated</dt>
+              <dd>23 Apr 2025 • 04:44</dd>
+            </dl>
+          </section>
+
+          <section>
+            <h2>Languages</h2>
+            <table class="lang-table">
+              <tr>
+                <td>Tajik</td>
+                <td>Native</td>
+              </tr>
+              <tr>
+                <td>Russian</td>
+                <td>C2 — Proficiency</td>
+              </tr>
+              <tr>
+                <td>English</td>
+                <td>B1 — Intermediate</td>
+              </tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Work Conditions</h2>
+            <div class="item">Desired commute time: any</div>
+          </section>
+        </aside>
+      </div>
+
+      <footer>
+        © <span id="y"></span> Nizomiddinov Nizomidin. This is a single‑file,
+        host‑anywhere CV. Print to PDF for sharing.
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
